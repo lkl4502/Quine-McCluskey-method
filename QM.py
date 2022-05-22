@@ -260,7 +260,6 @@ def optimization_form(input_count, EPI, second_EPI, remove_minterm):
                     s = s[:j + count] + s[j+count+1:]
                     count -= 1
             result.append(s)
-
     return result
 
 def Petrick_method(remove_minterm):
@@ -319,6 +318,7 @@ def solution(minterm):
     while condition:   # EPI가 더 이상 없을때까지 반복
         remove_minterm = Column_dominance(remove_minterm)   #[minterm]끼리 묶어서 반환
         remove_minterm = Row_dominance(remove_minterm)  # row_dominance후에 남은 row
+
         tmp = change_form(remove_minterm, input_count)
 
         second_EPI = Finding_EPI(tmp)
@@ -353,7 +353,7 @@ def solution(minterm):
 
     return answer
 
-# solution([4, 13, 0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13])
+solution([4, 13, 0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13])
 # solution([4, 11, 0, 2, 5, 6, 7, 8, 10, 12, 13, 14, 15])
 # solution(([3, 6, 0, 1, 2, 5, 6, 7]))
 # solution([4, 9, 1, 2, 3, 5, 7, 9, 10, 11, 13])
@@ -363,3 +363,5 @@ def solution(minterm):
 # solution([4, 8, 1, 2, 3, 4, 5, 7, 9, 15])
 # solution([4, 11, 0, 1, 2, 3, 5, 7, 8, 10, 12, 13, 15])
 # solution([3, 5, 0, 1, 2, 5, 7])
+# solution([4, 6, 0, 4, 8, 10, 11, 12])
+# solution([4, 6, 0, 4, 8, 10, 11, 12])

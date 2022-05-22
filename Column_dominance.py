@@ -64,4 +64,3 @@ def Column_dominance(tmp_minterm):
     print("Column_dominance :", check)
 
     return check   #Column_dominance 후에 정리된 minterm을 가진 pi
-

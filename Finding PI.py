@@ -42,4 +42,3 @@ def Finding_PI(input_count, array, answer):
     if zero_count == zerolist_len:
         result = []
     return result
-
